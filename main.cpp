@@ -22,7 +22,7 @@
 
 std::random_device rd;
 std::mt19937 gen(rd());
-std::uniform_int_distribution<> distrib(1,4294967295);
+std::uniform_int_distribution<> distrib(1,65535);
 
 static uint32_t RandSeedA = 1;
 static uint32_t RandSeedB = 1;
@@ -2380,4 +2380,5 @@ int main()
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
 //   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+
 
