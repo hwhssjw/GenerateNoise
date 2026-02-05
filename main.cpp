@@ -756,7 +756,8 @@ std::vector<unsigned char> Island(int X, int Y, int size, int Channel,
 }
 //旧版BUG太多了
 //-----------------------------------------------------------------------------
-/*void GCloud(int Cloudtimes, unsigned char Cloudcolor[6], int CLoudSize, int nameNumber, std::string name) {
+/*用改良版了
+void GCloud(int Cloudtimes, unsigned char Cloudcolor[6], int CLoudSize, int nameNumber, std::string name) {
     std::vector<unsigned char> img(X * Y * 6);
     for (int i = img.size() - 1; i > -1;) {
         for (int j = 5; j > 2 && i > -1; j--) {
@@ -2305,7 +2306,7 @@ void Custom(){
             << "1.Cloud\n"
             << "2.Random(Custom probability)\n"
             << "3.Center\n"
-            << "4.Exit\n"
+            << "4.Return\n"
             //<< "4.Surroundings\n"
             << "Enter number\n";
         SetColor(BRIGHT_CYAN);
@@ -2315,6 +2316,7 @@ void Custom(){
         if (InputB == "1")Cloud();
         if (InputB == "3")Center();
         if (InputB == "2")Randomcutom();
+        if (InputB == "4")break;
     }
 }
 //-----------------------------------------------------------------------------
@@ -2378,3 +2380,4 @@ int main()
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
 //   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+
