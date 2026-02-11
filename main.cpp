@@ -214,7 +214,7 @@ void ResetRandSeedTime() {
 //-----------------
 uint16_t RandB() {
     RandSeedB = (RandSeedB * 1664525 + 1013904223) % 4294967296;
-    return static_cast<uint16_t>(RandSeedA % 65535);
+    return static_cast<uint16_t>(RandSeedB % 65535);
 }
 //-----------------
 uint16_t RandC() {
@@ -2380,5 +2380,6 @@ int main()
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
 //   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+
 
 
