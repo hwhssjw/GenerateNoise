@@ -40,7 +40,7 @@ uint16_t GenerateNoiseTools::RandA()
 uint16_t GenerateNoiseTools::RandB()
 {
     RandSeedB = (RandSeedB * 1664525 + 1013904223) % 4294967296;
-    return static_cast<uint16_t>(RandSeedA % 65535);
+    return static_cast<uint16_t>(RandSeedB % 65535);
 }
 //-----------------------------------------------------------------------------
 uint16_t GenerateNoiseTools::RandC()
@@ -414,3 +414,4 @@ void GenerateNoiseTools::GenerateNoise_Random_Cutom_Save(std::string name, std::
     std::string __Name = name + ".PNG";
     if (!stbi_write_png((Path + __Name).c_str(), imgX, imgY, 4, GenerateNoise_Random_Cutom_Return(imgX, imgY, Fast, channel, color, Probability).data(), imgX * 4)) return;
 }
+
